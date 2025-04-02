@@ -1,0 +1,11 @@
+# prometheus.yml
+
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Scrape telegraf
+  - job_name: 'telegraf'
+    static_configs:
+      - targets: ['telegraf:9273']
